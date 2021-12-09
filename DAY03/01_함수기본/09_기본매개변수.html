@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // ...items : 나머지 매개변수
+        // 전달된 인자들을 배열로 가져옵니다
+        function pay( name, pay=8720, hours=40 ) {
+           console.log(`${name} 님의 급여`);
+           console.log(`시급 : ${pay} 원`);
+           console.log(`시간 : ${hours} 시간`);
+           console.log(`급여 : ${pay * hours * 4} 원`);
+           console.log('');
+    
+
+        }
+
+        pay( '스브스' )
+        pay( '스브스', 5000 )
+        pay( '스브스', 5000, 100)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
