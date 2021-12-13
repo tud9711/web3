@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded' , function() {
+        const imgs = document.querySelectorAll('.img')
+        imgs.forEach( (img, index) => {
+            const width = (index+1) * 100
+            const src = 'img/photo-1639342250070-8ab3b6e21036.jpg'
+            img.setAttribute('width', width)
+            img.setAttribute('src', src)
+        })
+    })
+  
+</script>
+<body>
+    <img src="" alt="" class="img">
+    <img src="" alt="" class="img">
+    <img src="" alt="" class="img">
+    <img src="" alt="" class="img">
+</body>
+</html>
