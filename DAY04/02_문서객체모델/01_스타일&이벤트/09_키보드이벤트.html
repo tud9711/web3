@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded' , function() {
+         const h1 = document.querySelector('h1')
+         const print = (event) => {
+             let output = ''
+             output += `alt : ${event.altKey}<br>`
+             output += `ctrl : ${event.ctrlKey}<br>`
+             output += `shift : ${event.shiftKey}<br>`
+             output += `keyCode : ${event.keyCode}<br>`
+             h1.innerHTML = output
+
+             if( event.keyCode == 13)
+                alert('엔터 입력')
+
+             if( event.ctrlKey && event.keyCode == 50) {
+                 location.href = "http://www.naver.com"
+             }
+         }
+
+         document.addEventListener('keydown', print)
+         document.addEventListener('keyup', print)
+        })
+
+    </script>
+</head>
+
+<body>
+    <h1>asdasd</h1>
+</body>
+</html>

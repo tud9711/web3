@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write('<h1>새로운 제목입니다</h1>')
+
+        const h3 = document.createElement('h3')
+        h3.innerText = '내일은 풀다운메뉴, 이미지 슬라이드 해봅시다'
+
+        document.body.appendChild(h3)
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const ul = document.getElementById('list')
+            const li = document.createElement('li')
+
+            const text = document.createTextNode('coffee')
+
+            const textStyle = document.createAttribute('style')
+            textStyle.value = 'color : hotpink'
+            li.setAttributeNode(textStyle)
+
+            li.appendChild(text)
+            li.append('메뉴를 만들어주세요')
+            ul.appendChild(li)
+
+            const btnCreate = document.getElementById('create')
+            const btnRemove = document.getElementById('remove')
+            const input = document.getElementById('input')
+
+            btnCreate.addEventListener('click' , addList )
+            btnRemove.addEventListener('click' , removeList)
+            input.addEventListener('keyup' , enter)
+
+            function addList() {
+                const ul = document.getElementById('list')
+                const li = document.createElement('li')
+                const input = document.getElementById('input')
+                const text = document.createTextNode(input.value)
+
+                li.appendChild(text)
+                ul.appendChild(li)
+
+                input.value = ''
+            }
+
+            function removeList() {
+                const ul = document.querySelector('#list')
+                const lists = document.querySelectorAll('#list li')
+
+                ul.removeChild(list[0])
+            }
+
+            function enter(event) {
+                if( event.keyCode == 13)
+                addList()
+            }
+        })
+    </script>
+</head>
+<body>
+    <hr>
+    <ul id="list"></ul>
+
+    <input type="text" name="input" id="input" placeholer="카페 이름">
+    <button id="create">추가</button>
+    <button id="remove">삭제</button>
+</body>
+</html>

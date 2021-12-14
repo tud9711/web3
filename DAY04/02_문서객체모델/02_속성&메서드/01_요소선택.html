@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cafeList = document.getElementsByTagName('li')
+            for( let i = 0 ; i < cafeList.length ; i++) {
+                cafeList.item(i).style.color = '#645fce'
+            }
+
+            const box = document.getElementById('box')
+            box.style.width = '200px'
+            box.style.height = '200px'
+            box.style.backgroundColor = 'cornflowerblue'
+
+            const items = document.getElementsByClassName('item')
+            items[0].style.width = '200px'
+            items[0].style.height = '100px'
+            items[0].style.backgroundColor = 'cornflowerblue'
+
+            items.item(2).style.width = '200px'
+            items.item(2).style.height = '100px'
+            items.item(2).style.backgroundColor = 'DarkSlateBlue'
+
+            items.item(3).style.width = '200px'
+            items.item(3).style.height = '100px'
+            items.item(3).style.backgroundColor = 'Indigo'
+
+
+            const inputs = document.getElementsByName('input')
+            const input = inputs[0]
+
+            input.addEventListener('keyup' , (event) => {
+                const text = document.getElementById('text')
+                text.innerText = input.value
+            })
+
+            const ul = document.querySelector('.product-list ul')
+            ul.style.listStyle = 'none';
+
+            const lists = document.querySelectorAll('.product-list ul li')
+
+            lists.forEach( (list) => {
+                list.children[0].src = './img/keyboard.jpg'
+                list.children[0].style.width = '200px'
+                list.childern[0].style.background = 'no-repeat'
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul class="cafe-list">
+        <li>둘체콜드브루</li>
+        <li>딸기라떼</li>
+        <li>민트초콜립칩플랫치노</li>
+        <li>녹차라떼</li>
+        <li>바닐라라떼</li>
+    </ul>
+
+    <hr>
+
+    <div id="box"></div>
+
+    <hr>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <hr>
+
+    <h1 id="text">입력해보세요</h1>
+    <input type="text" name="input" placeholder="입력해보세요" value="">
+
+    <hr>
+
+    <div class="product-list">
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
