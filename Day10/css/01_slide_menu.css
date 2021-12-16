@@ -69,6 +69,7 @@ nav>ul>li:hover::after {
     background-color : cornsilk;
     top : 85px;
     display : none;
+    z-index : 100;
 }
 
 .slide-open {
@@ -77,9 +78,10 @@ nav>ul>li:hover::after {
     cursor : pointer;
     margin-top : 20px;
     position : relative;
+    z-index : 300;
 }
 
-.burgur {
+.top {
     display : block;
     position : absolute;
     top : 10px;
@@ -88,7 +90,12 @@ nav>ul>li:hover::after {
     background-color : white;
 }
 
-.top-line {
+.top.on {
+    transform : translateY(7px) rotate(45deg);
+    transition : all 1s;
+}
+
+.mid {
     display : block;
     position : absolute;
     top : 17px;
@@ -97,7 +104,11 @@ nav>ul>li:hover::after {
     background-color : white;
 }
 
-.bot-line {
+.mid.on {
+    width : 0;
+}
+
+.bottom {
     display : block;
     position : absolute;
     top : 24px;
@@ -106,10 +117,37 @@ nav>ul>li:hover::after {
     background-color : white;
 }
 
+.bottom.on {
+    transform : translateY(-7px) rotate(-45deg);
+    transition : all 1s;
+}
 .slide {
     position : fixed;
-    width : 160px;
+    width : 300px;
     height : 100%;
     background-color : #ccc;
-    right : -100%;
+    left : -300px;
+    z-index : 300;
+}
+
+.bg {
+    display : block;
+    width : 100%;
+    height : 100vh;
+    background-color : rgba(0,0,0,0.4);
+    display : none;
+    z-index : 200;
+    position : fixed;
+    top : 0;
+}
+
+.close {
+    display : block;
+    width : 40px;
+    height : 40px;
+    background : url('../img/close.png') no-repeat;
+    position : absolute;
+    right : 10px;
+    top : 20px;
+    cursor : pointer;
 }

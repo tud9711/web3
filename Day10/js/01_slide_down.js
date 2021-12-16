@@ -1,3 +1,4 @@
+let slideOn = 'off'
 
 $(function(){
     $('nav>ul>li').on('mouseover', function() {
@@ -7,19 +8,31 @@ $(function(){
         $('.submenu').stop().slideUp(300)
     })
 
-    let slideOn = 'off'
     $('.slide-open').on('click', function(){
         if( slideOn == 'off') {
             $('.slide').animate({
-                right : 0
-            },1000)
+                left : 0
+            })
             slideOn = 'on'
+            $('.bg').fadeIn()
+            $('.slide-open span').addClass('on')
         } else {
-            $('.slide').stop().animate({
-                right : '-100%'
-            },1000)
-            slideOn = 'off'
+            slideOut()
         }
+
     })
+
+    $('.bg, .close').on('click', function(){
+        slideOut()
+    })
+
+    function slideOut(){
+        $('.slide').stop().animate({
+            left : '-300px'
+        })
+        slideOn = 'off'
+        $('.bg').fadeOut()
+        $('.slide-open span').removeClass('on')
+    }
 
 })
