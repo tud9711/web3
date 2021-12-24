@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     owl.owlCarousel({
         loop:true,
-        cener : true,
+        center : true,
         autoplay : false,
         autoplayTimeOut : 5000,
         autoplayHoverPause : false,
@@ -24,7 +24,7 @@ $(document).ready(function(){
    });
 
    owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
+    if (e.originalEvent.wheelDelta>0) {
         owl.trigger('next.owl');
     } else {
         owl.trigger('prev.owl');

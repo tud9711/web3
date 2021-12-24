@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.scrolla.js"></script> 
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animate__animated animate__wobble">aaaa</h1> <!-- animate 적용-->
+        <!-- 애니메이션 적용할 class 이름 짓기-->
+        <!-- data-animate 속성에 애니메이션 이름 작성-->
+        <!-- data-duration 속성에 재생시간을 작성-->
+        <!-- data-delay 속성에 지연시간 작성-->
+        <div class="box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="0.3s"></div>
+        <div class="empty"></div>
+        <div class="box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="0.3s"></div>
+        <div class="empty"></div>
+        <div class="box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="0.3s"></div>
+        <div class="empty"></div>
+        <div class="box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="0.3s"></div>
+
+        <hr>
+        <div class="img-container">
+            <div class="img-box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="0.3s">
+                <img src="img/xmas.jpg" alt=""></div>
+
+            <div class="img-box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="0.8s">
+                <img src="img/xmas.jpg" alt=""></div>
+
+            <div class="img-box animate" data-animate="fadeInUp" data-duration="1.5s" data-delay="1.3s">
+                <img src="img/xmas.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>  
