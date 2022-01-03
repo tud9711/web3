@@ -42,18 +42,20 @@
             <a href="#" class="logo">SBS Academy</a>
             <!-- gnb -->
             <nav>
+                <!-- 모바일 메뉴 x버튼 -->
+                <a href="#" class="close"><span class="lnr lnr-cross"></span></a>
                 <ul class="gnb">
-                    <li><a href="#">menu 01</a></li>
-                    <li><a href="#">menu 02</a></li>
-                    <li><a href="#">menu 03</a></li>
-                    <li><a href="#">menu 04</a></li>
-                    <li><a href="#">menu 05</a></li>
+                    <li><a href="#aa">menu 01</a></li>
+                    <li><a href="#aaa">menu 02</a></li>
+                    <li><a href="#aaaa">menu 03</a></li>
+                    <li><a href="#bb">menu 04</a></li>
+                    <li><a href="#bbb">menu 05</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- section : visual -->
-        <section class="visual">
+        <section class="visual" id="aa">
             <!-- 슬라이드 -->
             <ul class="slide">
                 <!-- slide 01 -->
@@ -135,7 +137,7 @@
 
         </section>
         <!-- section : about -->
-        <section class="about">
+        <section class="about" id="aaa">
             <img src="img/main2_bg.jpg" alt="">
             <div class="inner animate" data-animate="motion">
                 <!-- about 타이틀 -->
@@ -173,7 +175,7 @@
         </section>
 
         <!-- section : premium -->
-        <section class="premium">
+        <section class="premium" id="aaaa">
             <span class="txtImg animate" data-animate="motion" ><img src="img/pre_img.png" alt=""></span>
             <div class="title">
                 <h2>프리미엄 멤버쉽</h2>
@@ -191,7 +193,7 @@
 
 
         <!-- section : global  -->
-        <section class="global animate" data-animate="motion">
+        <section class="global animate" data-animate="motion" id="bb">
             <div class="title">
                <h2>Global Concierge Services</h2> 
                <p>로벌 컨시어지 서비스를 통해<br>
@@ -223,11 +225,39 @@
 
         <!-- section :  -->
         <!-- footer -->
-
+        <footer id="bbb">
+            <ul class="sns">
+                <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="img/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="img/blog.png" alt=""></a></li>
+            </ul>
+            <h2 class="footerLogo">Concierge</h2>
+            <ul>
+                <li>대표자 홍길동 | 서울 중구 세종대로 110</li>
+                <li>사업자등록번호:123-12-12345 | 이메일:abc@naver.com</li>
+                <li><span class="copyright">COPYRIGHT 2020</span></li>  
+            </ul>
+            <div class="box animate" data-animate="motion">
+                <h2>전세계 어디든 나만의 컨시어지가 있다.<br>
+                   For Your Business & Life</h2>
+            </div>
+        </footer>
     </div><!-- cotianer 끝 -->
 
     <!-- UI -->
+        <!-- scroll indicator -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
         <!-- floating -->
+        <div class="floating">
+            <ul class="floating-list">
+                <li id="floating-btn1"><a href="#"><span class="lnr lnr-layers"></span></a></li>
+                <li id="floating-btn2"><a href="#"><span class="lnr lnr-user"></span></a></li>
+                <li id="floating-btn3"><a href="#"><span class="lnr lnr-pencil"></span></a></li>
+            </ul>
+        </div>
         <!-- quick menu -->
         <!-- modal -->
 
